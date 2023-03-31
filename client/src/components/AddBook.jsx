@@ -13,8 +13,8 @@ const AddBook = () => {
     });
 
     const [addNewBook] = useMutation(ADD_BOOK_MUTATION, {
-        variables : bookDetail,
-        refetchQueries : [{query : GET_BOOKLIST}]
+        variables : bookDetail,  // you have pass your argumnets using variables key
+        refetchQueries : [{query : GET_BOOKLIST}]  // here you are refecthing the query again after adding new book to the database to update your UI.
     });
     const submitForm = (event)=>{
         event.preventDefault();
